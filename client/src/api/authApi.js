@@ -47,7 +47,7 @@ const opitons = {
 }
 
 
-  request.get(`${baseUrl}/logout`,null, opitons).then(userLogoutHandler);
+  request.get(`${baseUrl}/logout`,null, opitons).finally(userLogoutHandler);
 },[accessToken, userLogoutHandler])
 
 return{
