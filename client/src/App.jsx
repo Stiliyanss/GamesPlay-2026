@@ -13,6 +13,7 @@ import { UserProvider } from './providers/UserProvider.jsx'
 import AuthGuard from './components/guards/AuthGuard.jsx'
 import GuestGuard from './components/guards/GuestGuard.jsx'
 import { lazy, Suspense } from 'react'
+import {ToastContainer} from 'react-toastify'
 // import Admin from './components/admin/Admin.jsx'
 const Admin = lazy(()=> import('./components/admin/Admin.jsx'))
 
@@ -45,6 +46,7 @@ function App() {
           }/>
       </Routes>
     </main>
+    <ToastContainer/>
    </div>
    </UserProvider>
   ) 

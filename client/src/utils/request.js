@@ -19,7 +19,13 @@
   
   if(response.status == 204){
     return response;
-  } 
+  }
+  
+  if(!response.ok){
+    const result = response.json();
+    throw result;
+  }
+
   const result = await response.json();
 
   return result;
